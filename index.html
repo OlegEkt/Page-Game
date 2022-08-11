@@ -5,27 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title> 
-    <script>  
-    info();
-      function info(){
-          const lvlNumber = "3 уровня.";
-          var title1 = "Игра 1: Вычислить среднее арифметическое.";
-          var description1 = "Описание игры: Выполняется функция, которая запрашивает у пользователя 5 чисел, после чего записывает их в массив. Функция возвращает среднее арифметическое всех элементов массива.";
-          var title2 = "Игра 2: Сумма двух случайных чисел."; 
-          var description2 = "Описание игры: Выполняется функция, которая генерирует два случайных числа и просит пользователя посчитать их сумму. Возвращает true, если сумма посчитана верно, false – если неверно.";
-          var title3 = "Игра 3: Удаление гласных из строки.";
-          var description3 = "Описание игры: Выполняется функция, которая просит у пользователя ввести строку, после чего возвращает её же, убрав из неё все гласные буквы.";
-          document.write("<h1>Привет!</h1>");        
-          document.write("<h2>Мы предлагаем тебе сыграть в игру:<\h2>");
-          document.write("<br>Количество уровней в игре: " + lvlNumber + "<br>" + "<br>" + title1 + "<br>" + description1 + "<br>");
-          document.write("<br>"+ title2 + "<br>" + description2 + "<br>");
-          document.write("<br>"+ title3 + "<br>" + description3 + "<br>");
-      }   
-
-   </script>
-   
-</head>
-<style>
+    <style>
     h1 {
          color: tomato;
          font-size: 50px;
@@ -38,18 +18,34 @@
          font-weight: bold;
          font-family: Comic Sans MS;
     }    
-</style>
+</style>    
+    <script>  
+    info();
+      function info(){
+          const lvlNumber = "3 уровня.";
+          var title1 = "Игра 1: Вычислить среднее арифметическое.";
+          var description1 = "Описание игры: Выполняется функция, которая запрашивает у пользователя 5 чисел, после чего записывает их в массив. Функция возвращает среднее арифметическое всех элементов массива.";
+          var title2 = "Игра 2: Сумма двух случайных чисел."; 
+          var description2 = "Описание игры: Выполняется функция, которая генерирует два случайных числа и просит пользователя посчитать их сумму. Возвращает true, если сумма посчитана верно, false – если неверно.";
+          var title3 = "Игра 3: Удаление гласных из строки.";
+          var description3 = "Описание игры: Выполняется функция, которая просит у пользователя ввести строку, после чего возвращает её же, убрав из неё все гласные буквы.";
+          document.write("<h1>Привет!</h1>");        
+          document.write("<h2>Мы предлагаем тебе сыграть в игру:</h2>");
+          document.write("<br><h2>Количество уровней в игре: " + lvlNumber + "<br>" + "<br>" + title1 + "<br>" + description1 + "</h2><br>");
+          document.write("<br><h2>"+ title2 + "<br>" + description2 + "</h2><br>");
+          document.write("<br><h2>"+ title3 + "<br>" + description3 + "</h2><br>");
+      }  
+   </script>
+</head>
 <body>
-  
-  
   <p style="color: tomato;
   font-size: 30px;
   font-weight: bold;
   font-family: Comic Sans MS; ">
-    Продолжить играть?
-    Нажми<a href="index.html"><span style="color: rgba(47, 47, 41, 0.769);"> здесь!</span></a>
+    Начать играть?
+    Нажми<a href="contin.html"><span style="color: rgba(47, 47, 41, 0.769);"> здесь!</span></a>
   </p> 
-    <script>
+<!--     <script>
     setTimeout(index, 500);
     
     function index(){  
@@ -117,7 +113,7 @@
        return("Мы убрали все гласные буквы из строки. \n" + res);
     }
   
-  </script>
+  </script> -->
 </body>
  
 </html>
