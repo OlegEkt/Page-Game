@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contin</title> 
+    <style>
+      h1 {
+           color: tomato;
+           font-size: 50px;
+           font-weight: bold;
+           font-family: Comic Sans MS;
+      }
+      h2 {
+           color: rgba(47, 47, 41, 0.769);
+           font-size: 20px;
+           font-weight: bold;
+           font-family: Comic Sans MS;
+      }    
+  </style>
+    <script>  
+    info();
+      function info(){
+          const lvlNumber = "3 уровня.";
+          var title1 = "Игра 1: Вычислить среднее арифметическое.";
+          var description1 = "Описание игры: Выполняется функция, которая запрашивает у пользователя 5 чисел, после чего записывает их в массив. Функция возвращает среднее арифметическое всех элементов массива.";
+          var title2 = "Игра 2: Сумма двух случайных чисел."; 
+          var description2 = "Описание игры: Выполняется функция, которая генерирует два случайных числа и просит пользователя посчитать их сумму. Возвращает true, если сумма посчитана верно, false – если неверно.";
+          var title3 = "Игра 3: Удаление гласных из строки.";
+          var description3 = "Описание игры: Выполняется функция, которая просит у пользователя ввести строку, после чего возвращает её же, убрав из неё все гласные буквы.";
+          document.write("<h1>Привет!</h1>");        
+          document.write("<h2>Мы предлагаем тебе сыграть в игру:</h2>");
+          document.write("<br><h2>Количество уровней в игре: " + lvlNumber + "<br>" + "<br>" + title1 + "<br>" + description1 + "</h2><br>");
+          document.write("<br><h2>"+ title2 + "<br>" + description2 + "</h2><br>");
+          document.write("<br><h2>"+ title3 + "<br>" + description3 + "</h2><br>");
+      }   
+  </script>
+</head>
+
+<body>
+  <p style="color: tomato;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Comic Sans MS; ">
+    Продолжить играть?
+    Нажми<a href="contin.html"><span style="color: rgba(47, 47, 41, 0.769);"> здесь!</span></a>
+  </p>
+</body>
+ 
+ <script>
+  setTimeout(index, 500);
+    
+    function index(){  
+      var level = chooseLvl();
+        switch(level){
+        case 1: alert(lvl1());
+        break;
+        case 2: alert(lvl2());
+        break;
+        case 3: alert(lvl3());
+        break;
+      }
+    }
+
+   function chooseLvl(){                 
+     var i;
+      do {
+      var strIn = prompt("Вам необходимо выбрать и написать в строке заглавными буквами уровень сложности игры. \n \
+       \n1.EASY\n2.NORMAL\n3.HARD");
+       if (strIn == "EASY")
+        return 1;        
+       if (strIn == "NORMAL")
+        return 2;       
+       if (strIn == "HARD")
+        return 3;        
+       i++;
+      }while(strIn !== "EASY" && strIn != "NORMAL" && strIn != "HARD");
+    }    
+  
+   function lvl1(){                    
+     var arr = [];
+     arr[0] = +prompt("Введите 1 число:");
+     arr[1] = +prompt("Введите 2 число:");
+     arr[2] = +prompt("Введите 3 число:");
+     arr[3] = +prompt("Введите 4 число:");
+     arr[4] = +prompt("Введите 5 число:");
+     var sumArr = 0;
+       for(var i = 0; i < arr.length; i++){
+        sumArr += arr[i];
+        var number = sumArr / arr.length;
+    }
+       return +number.toFixed(2);   
+    }  
+    
+   function lvl2(){                       
+     var begin = 1;
+     var end = 100;
+     var num1 = (Math.ceil(Math.random()* (end - begin) + begin));
+     var num2 = (Math.ceil(Math.random()* (end - begin) + begin));
+     var Summ = num1 + num2;
+     alert("Первое случайное число: " + num1 + "\nВторое случайное число: " + num2 + "\nПосчитайте сумму случайных чисел. \nЕсли готовы нажмите ОК.");
+     var res = +prompt("Введите сумму случайных и чисел и нажмите ОК.");
+       if (res == Summ)
+        return true;
+     return false;    
+    } 
+
+   function lvl3(){                       
+     var str = prompt("Напишите строку.");
+     var res = str.split("").filter(letter => !["e","u","i","o","a","у","е","ы","а","о","э","ё","я","и","ю"]
+         .includes(letter.toLowerCase())).join("");
+       return("Мы убрали все гласные буквы из строки. \n" + res);
+    } 
+ </script>
+</html>
